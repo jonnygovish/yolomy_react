@@ -1,14 +1,14 @@
 import React from 'react';
-import '../App.css';
+import '../styles/App.css';
+import Header from './Header';
 
 function App() {
-  const price = '500'
-  const size = 'large'
+ 
   return (
     <React.Fragment>
-      <h1>Yolomoy Products</h1>
-      <p>Trousers - {size}</p>
-      <p>Price - {price} </p>
+      <div className="container-fluid">
+        <Header />
+      </div>
     </React.Fragment>    
   )
 }
