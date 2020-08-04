@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import '../styles/addProduct.css';
 
-function AddProduct() {
+function AddProduct(props) { //add props as a parameter
     return (
         <React.Fragment>
             <div className="section-2">
@@ -10,7 +11,7 @@ function AddProduct() {
                         <div className="col-sm-12 col-12 col-md-6">
                             <div className="float-md-right">
                                 {/* {addProductButton} */}
-                                <button onClick={props.whenButtonClicked} className="see-all-products text-center mx-auto">{props.buttonText}</button>
+                                <button  className="see-all-products text-center mx-auto" onClick={props.whenButtonClicked} >{props.buttonText}</button>  
                             </div>
                         </div>
 
