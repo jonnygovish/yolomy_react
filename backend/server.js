@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const productRoutes = require('./routes/productRoutes') //new code
 
@@ -8,6 +9,9 @@ const app = express()
 
 // Body parser middleware
 app.use(express.json())
+
+// Cors
+app.use(cors())
 
 //DB config
 const MONGODB_URI= require('./config').mongoDB_URI
