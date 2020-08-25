@@ -45,12 +45,7 @@ class ProductControl extends Component {
 
 
     // Method to handle adding a new product
-    handleAddingNewProduct = (newProduct) =>{
-        // if (newProduct.photo === undefined){
-        //     newProduct.photo = Default_image
-        // }
-        // const newProductList = this.state.actualProductList.concat(newProduct)
-
+    handleAddingNewProduct = (newProduct) =>{   
         axios.post('http://localhost:5000/products', newProduct)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
