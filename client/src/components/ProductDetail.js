@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/productDetail.css'
+import Default_image from '../images/product_image.jpeg'
 
 function ProductDetail(props) {
     return (
@@ -12,7 +13,7 @@ function ProductDetail(props) {
                             <div className="preview col-md-6">
                                 
                                 <div className="preview-pic tab-content">
-                                <div className="tab-pane active" id="pic-1"><img src={props.product.photo} alt="" /></div>
+                                <div className="tab-pane active" id="pic-1"><img src={Default_image} alt="" /></div>
                                 </div>
                                 
                             </div>
@@ -43,8 +44,8 @@ function ProductDetail(props) {
                                 
                                 <div className="action">
                                     <button className="add-to-cart btn btn-default"  type="button">Buy Product</button>
-                                    {/* <button className="like btn btn-default" type="button"><span className="fa fa-heart"></span></button> */}
-                                    <button className="add-to-cart btn btn-default float-right"> Delete Product</button>
+                
+                                    <button className="add-to-cart btn btn-default float-right" onClick={()=> props.onDeleteProduct(props.product._id)}> Delete Product</button> {/* new code*/}
                                 </div>
                             </div>
                         </div>
