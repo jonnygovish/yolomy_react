@@ -34,7 +34,7 @@ function ProductList(props) {
                     name = {product.name}
                     price = {product.price}
                     id = {product.id}
-                    key= {product.id}/>
+                    key= {product._id}/>
 
                 )}
                 </div>
