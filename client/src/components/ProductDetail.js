@@ -17,8 +17,14 @@ function ProductDetail(props) {
                                 </div>
                                 
                             </div>
-                            <div className="details col-md-6">
-                                <h3 className="product-title">{props.product.name} </h3>
+                            <div className="details col-md-6"><div className = "row">
+                                    <div className="col-md-6">
+                                        <h3 className="product-title">{props.product.name} </h3>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <button className="add-to-cart btn btn-default float-right" onClick ={props.onEditProductClick} > Edit Product</button> {/*new code*/}
+                                    </div>
+                                </div>
                                 <div className="rating">
                                     <div className="stars">
                                         <span className="fa fa-star checked"></span>
